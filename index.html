@@ -25,40 +25,47 @@
 				border: 0.0625rem solid #AAAAAA;
 				/* 仅供测试的黑框 */
 			}
+			
+			.container>.fa-star
 
-			.topbar > .container>a,
-			.topbar > .container>span {
+			.topbar>.container>a ,
+			.topbar>.container>span {
 				/* 复杂选择器 */
 				/* >选择孩子,逗号表示同时选择多个 */
 				padding-left: 1em;
 			}
 
-			.searchbar > .container {
+			.searchbar>.container {
 				padding-top: 2em;
 				padding-bottom: 2em;
 			}
 
 			.theme {
 				/* 主题色 */
+				color: #57BC4C;
 			}
 
 			.theme-reverse {
 				/* 主题色的反色 */
 				color: #FF6600;
 			}
+			
+			.gray {
+				color: #CCD2D7;
+			}
 
 			.searchbar {
 				width: 100%;
 				background: #FFFFFF;
 			}
-			
+
 			.search {
 				float: right;
 				/* 搜索条右浮动 */
 				margin-top: 8px;
 			}
 
-			.search > input {
+			.search>input {
 				width: 430px;
 				height: 32px;
 				border: 1px solid #ccc;
@@ -68,7 +75,7 @@
 				padding-right: .7em;
 			}
 
-			.search > .fa-search {
+			.search>.fa-search {
 				/* 搜索图标的再设定 */
 				background: #57bc4c;
 				color: #FFFFFF;
@@ -78,6 +85,26 @@
 				line-height: 32px;
 				text-align: center;
 			}
+
+			.shoppingcart {
+				background: #F9F9F9;
+				color: #555555;
+				width: 140px;
+				height: 32px;
+				line-height: 32px;
+				border: 1px solid #CCCCCC;
+				outline: none;
+				float: right;
+				padding-left: 0.5625rem;
+				padding-right: 0.5625rem;
+				margin-left: 1.5625rem;
+				margin-top: 0.5rem;
+			}
+
+
+			.shoppingcart>.fa-shopping-cart {
+				
+			}
 		</style>
 	</head>
 	<body>
@@ -85,14 +112,15 @@
 		<div class="topbar">
 			<div class="container">
 				<a href="#">
-					<span class="fa fa-star"></span>&nbsp;收藏i前端
+					<span class="fa fa-star gray"></span>
+					收藏i前端
 				</a>
 				<a href="#">
-					<span class="fa fa-mobile-phone fa-lg"></span>
+					<span class="fa fa-mobile-phone fa-lg gray"></span>
 					<span class="theme-reverse">下载手机客户端</span>
 				</a>
-				<span class="fa fa-envelope"></span>&nbsp;反馈邮箱：DouNiWan@aha.cn
-				<span class="fa fa-mobile-phone fa-lg"></span>&nbsp;客服热线：4008-200-200
+				<span class="fa fa-envelope gray"></span>&nbsp;反馈邮箱：DouNiWan@aha.cn
+				<span class="fa fa-mobile-phone fa-lg gray"></span>&nbsp;客服热线：4008-200-200
 
 			</div>
 		</div>
@@ -101,12 +129,15 @@
 			<div class="container">
 				<!-- LOGO -->
 				<img src="img/logo.png" alt="iWeb_LOGO">
+				<!-- 我的购物车 -->
+				<div class="shoppingcart">
+					<span class="fa fa-shopping-cart fa-lg theme"></span>
+					&nbsp;我的购物车（0）
+				</div>
 				<!-- 输入框 -->
-
 				<div class="search">
 					<input type="text" placeholder="课程搜索" /><span class="fa fa-search fa-lg"></span>
 				</div>
-				<!-- 我的购物车 -->
 			</div>
 		</div>
 	</body>

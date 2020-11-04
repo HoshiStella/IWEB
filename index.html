@@ -1,2 +1,113 @@
-/*iweb在线课堂首页*/
-iWeb-index
+<!DOCTYPE html>
+<html lang="zh">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta http-equiv="X-UA-Compatible" content="ie=edge">
+		<title>iWeb在线课堂</title>
+		<link rel="stylesheet" type="text/css" href="img/favicon.ico" />
+		<link rel="stylesheet" type="text/css" href="css/base.css" />
+		<link rel="stylesheet" type="text/css" href="css/font-awesome.css" />
+		<style type="text/css">
+			.topbar {
+				width: 100%;
+				height: 1.8125rem;
+				line-height: 1.8125rem;
+				background: #f9f9f9;
+				border-bottom: 0.0625rem solid #EEEEEE;
+				text-align: right;
+			}
+
+			.container {
+				width: 62.5rem;
+				margin-left: auto;
+				margin-right: auto;
+				border: 0.0625rem solid #AAAAAA;
+				/* 仅供测试的黑框 */
+			}
+
+			.topbar > .container>a,
+			.topbar > .container>span {
+				/* 复杂选择器 */
+				/* >选择孩子,逗号表示同时选择多个 */
+				padding-left: 1em;
+			}
+
+			.searchbar > .container {
+				padding-top: 2em;
+				padding-bottom: 2em;
+			}
+
+			.theme {
+				/* 主题色 */
+			}
+
+			.theme-reverse {
+				/* 主题色的反色 */
+				color: #FF6600;
+			}
+
+			.searchbar {
+				width: 100%;
+				background: #FFFFFF;
+			}
+			
+			.search {
+				float: right;
+				/* 搜索条右浮动 */
+				margin-top: 8px;
+			}
+
+			.search > input {
+				width: 430px;
+				height: 32px;
+				border: 1px solid #ccc;
+				/* 输入框获得焦点时的外围轮廓线 */
+				outline: none;
+				padding-left: .7em;
+				padding-right: .7em;
+			}
+
+			.search > .fa-search {
+				/* 搜索图标的再设定 */
+				background: #57bc4c;
+				color: #FFFFFF;
+				font-size: 2.1em;
+				width: 50px;
+				height: 32px;
+				line-height: 32px;
+				text-align: center;
+			}
+		</style>
+	</head>
+	<body>
+		<!-- 顶部条 -->
+		<div class="topbar">
+			<div class="container">
+				<a href="#">
+					<span class="fa fa-star"></span>&nbsp;收藏i前端
+				</a>
+				<a href="#">
+					<span class="fa fa-mobile-phone fa-lg"></span>
+					<span class="theme-reverse">下载手机客户端</span>
+				</a>
+				<span class="fa fa-envelope"></span>&nbsp;反馈邮箱：DouNiWan@aha.cn
+				<span class="fa fa-mobile-phone fa-lg"></span>&nbsp;客服热线：4008-200-200
+
+			</div>
+		</div>
+		<!-- 搜索条 -->
+		<div class="searchbar">
+			<div class="container">
+				<!-- LOGO -->
+				<img src="img/logo.png" alt="iWeb_LOGO">
+				<!-- 输入框 -->
+
+				<div class="search">
+					<input type="text" placeholder="课程搜索" /><span class="fa fa-search fa-lg"></span>
+				</div>
+				<!-- 我的购物车 -->
+			</div>
+		</div>
+	</body>
+</html>

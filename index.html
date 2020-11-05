@@ -97,8 +97,6 @@
 			.cart-container {
 				/* 修改购物车容器的定位方式,为下拉菜单提供参照物,且不脱离文档流 */
 				position: relative;
-				/* 提升购物车容器的z轴*/
-				z-index: 1;
 				float: right;
 				margin-left: 1.5625rem;
 				margin-top: 0.5rem;
@@ -111,7 +109,8 @@
 				/* 修改光标样式 */
 				cursor: pointer;
 				position: relative;
-				z-index: 2;
+				/* 提升购物车高度 */
+				z-index: 1;
 				/* 购物车下边框变白 */
 				border-bottom:none;
 			}
@@ -144,7 +143,6 @@
 				/* 也可以简写为pading: 2em 3em,即上与下,右与左同宽 */
 				width: 16.375rem;
 				background: #FFFFFF;
-				z-index: 1;
 			}
 		</style>
 	</head>

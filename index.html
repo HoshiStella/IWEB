@@ -68,7 +68,7 @@
 			.search {
 				float: right;
 				/* 搜索条右浮动 */
-				margin-top: 5px;
+				margin-top: 8px;
 			}
 
 			.search>input {
@@ -93,7 +93,7 @@
 				text-align: center;
 				vertical-align: middle;
 			}
-			
+
 			.cart-container {
 				/* 修改购物车容器的定位方式,为下拉菜单提供参照物,且不脱离文档流 */
 				position: relative;
@@ -103,6 +103,7 @@
 			}
 
 			.cart {
+				/* 购物车下面没有下拉菜单的样式 */
 				background: #F9F9F9;
 				line-height: 31px;
 				border: 1px solid #DDDDDD;
@@ -111,8 +112,14 @@
 				position: relative;
 				/* 提升购物车高度 */
 				z-index: 1;
+			}
+
+			.cart.open {
+				/* 购物车下面有下拉菜单的样式 */
+				background: #FFFFFF;
+				line-height: 31px;
 				/* 购物车下边框变白 */
-				border-bottom:none;
+				border-bottom: none;
 			}
 
 			.cart>.fa {
@@ -133,6 +140,7 @@
 			}
 
 			.cart-container>.dropdown {
+				/* 下拉菜单不显示时的样式 */
 				/* 绝对定位的元素可以处于其他元素上方 */
 				position: absolute;
 				top: 31px;
@@ -143,7 +151,39 @@
 				/* 也可以简写为pading: 2em 3em,即上与下,右与左同宽 */
 				width: 16.375rem;
 				background: #FFFFFF;
+				/* 不显示下拉菜单 */
+				display: none;
 			}
+
+			.cart-container>.dropdown.open {
+				/* 下拉菜单不显示时的样式 */
+				display: block;
+			}
+
+			.navbar {
+				background: #57BC4C;
+				width: 100%;
+				height: 2.625rem;
+				line-height: 2.5rem;
+				border-bottom: 0.125rem solid #c1eebd;
+				font-size: 1.2em;
+			}
+			
+			.navbar .menu li {
+				/* 让块级元素li全部浮动,达到无缝效果 */
+				float: left;
+				padding: 0 1.5em;
+			}
+			
+			.navbar .menu li:hover {
+				background: #4aaf3f;
+			}
+			
+			.navbar .menu li a {
+				/* 使用比上面a的简单选择器更高优先级的复杂选择器来更改字体颜色 */
+				color: #FFFFFF;
+			}
+			
 		</style>
 	</head>
 	<body>
@@ -168,15 +208,15 @@
 			<div class="container">
 				<!-- LOGO -->
 				<img src="img/logo.png" alt="iWeb_LOGO">
-				<div class="cart-container">
+				<div class="cart-container" id="myCart">
 					<!-- 我的购物车（z-index要高于“下拉菜单”） -->
-					<div class="cart" id="myCart">
+					<div class="cart" id="cart">
 						<span class="fa fa-shopping-cart fa-lg theme"></span>
 						<span>我的购物车(<b>0</b>)</span>
 						<span class="fa fa-caret-down theme caret" id="caret"></span>
 					</div>
 					<!-- 下拉菜单 -->
-					<div class="dropdown">请登陆后查看您的购物车</div>
+					<div class="dropdown" id="dropdown">请登陆后查看您的购物车</div>
 				</div>
 
 				<!-- 输入框 -->
@@ -185,14 +225,35 @@
 				</div>
 			</div>
 		</div>
-
+		<!-- 导航条 -->
+		<div class="navbar">
+			<div class="container">
+				<!-- 左侧的功能列表 -->
+				<ul class="menu">
+					<li><a href="index.html">首页</a></li>
+					<li><a href="course.html">全部课程</a></li>
+					<li><a href="course.html?tid=1">基础课程</a></li>
+					<li><a href="course.html?tid=2">进阶课程</a></li>
+					<li><a href="course.html?tid=3">核心课程</a></li>
+					<li><a href="teacher.html">名师堂</a></li>
+					<li><a href="school.html">校区</a></li>
+				</ul>
+				<!-- 右侧的登录列表 -->
+			</div>
+		</div>
 		<script type="text/javascript">
-			//悬停在“我的购物车”上，后面的三角开始旋转，离开则还原
+			//1.悬停在“我的购物车”上，后面的三角开始旋转，离开则还原
+			//2.购物车从四边显示到open状态中的三边显示
+			//3.下拉菜单从隐藏到open状态中的显示
 			myCart.onmouseenter = () => {
 				caret.classList.add('caret-rotate')
+				cart.classList.add('open')
+				dropdown.classList.add('open')
 			}
 			myCart.onmouseleave = () => {
 				caret.classList.remove('caret-rotate')
+				cart.classList.remove('open')
+				dropdown.classList.remove('open')
 			}
 		</script>
 

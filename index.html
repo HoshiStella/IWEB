@@ -22,7 +22,7 @@
 				width: 62.5rem;
 				margin-left: auto;
 				margin-right: auto;
-				border: 0.0625rem solid #AAAAAA;
+				/* border: 0.0625rem solid #AAAAAA; */
 				/* 仅供测试的黑框，完成后去掉 */
 			}
 
@@ -163,27 +163,121 @@
 			.navbar {
 				background: #57BC4C;
 				width: 100%;
-				height: 2.625rem;
-				line-height: 2.5rem;
-				border-bottom: 0.125rem solid #c1eebd;
+				height: 42px;
+				line-height: 40px;
+				border-bottom: 2px solid #c1eebd;
 				font-size: 1.2em;
 			}
-			
+
 			.navbar .menu li {
 				/* 让块级元素li全部浮动,达到无缝效果 */
 				float: left;
 				padding: 0 1.5em;
 			}
-			
+
 			.navbar .menu li:hover {
 				background: #4aaf3f;
 			}
-			
+
 			.navbar .menu li a {
 				/* 使用比上面a的简单选择器更高优先级的复杂选择器来更改字体颜色 */
 				color: #FFFFFF;
 			}
-			
+
+			.navbar .navuser {
+				float: right;
+				width: 140px;
+				text-align: center;
+				color: #FFFFFF;
+				line-height: 40px;
+				font-size: 15px;
+				background: #77c558;
+			}
+
+			.navbar .navuser a {
+				color: #FFFFFF;
+			}
+
+			.navbar .navuser a:hover {
+				color: #FF6600;
+			}
+
+			.mainpart {
+				width: 100%;
+			}
+
+			.mainpart .minitittle {
+				height: 40px;
+				line-height: 42px;
+				border-bottom: 2px solid #DDDDDD;
+				margin-top: 20px;
+			}
+
+			.minitittle span {
+				float: left;
+				text-align: center;
+				font-size: 18px;
+				width: 100px;
+				height: 40px;
+				border-bottom: 2px solid #57bc4c;
+			}
+
+			.minitittle a {
+				float: right;
+				text-align: center;
+				font-size: 14px;
+				height: 28px;
+				color: #999999;
+			}
+
+			.minitittle a:hover {
+				color: #FF6600;
+			}
+
+			.mainpart a:hover {
+				color: #FF6600;
+			}
+
+			.mainpart li {
+				float: left;
+				text-align: center;
+				margin: 30px 15px;
+			}
+
+			.mainpart .maintext {
+				display: list-item;
+				text-align: left;
+			}
+
+			.mainpart .text_name {
+				font-size: 14px;
+				color: #555555;
+			}
+
+			.mainpart .text_teacher {
+				font-size: 12px;
+				color: #999999;
+			}
+
+			.mainpart .text_price {
+				font-size: 16px;
+				font-weight: bold;
+				color: #FF6600;
+			}
+
+			.overflow {
+				overflow: hidden;
+				height: 138px;
+			}
+
+			.pic {
+				transform: scale(1);
+				transition: all .5s;
+			}
+
+			.big {
+				transform: scale(1.12);
+			}
 		</style>
 	</head>
 	<body>
@@ -239,21 +333,82 @@
 					<li><a href="school.html">校区</a></li>
 				</ul>
 				<!-- 右侧的登录列表 -->
+				<div class="navuser">
+					<span><a href="#">登录</a></span>
+					|
+					<span><a href="#">注册</a></span>
+				</div>
 			</div>
 		</div>
+		<!-- 滚动广告 -->
+		<!-- 主体内容 -->
+		<div class="mainpart">
+			<div class="container">
+				<div class="minitittle">
+					<span>最新课程</span>
+					<a href="#">更多</a>
+				</div>
+				<ul>
+					<li>
+						<a href="#">
+							<div class="overflow">
+								<img class="pic" src="img/course/01.jpg">
+							</div>
+						</a>
+						<a href="#" class="maintext text_name">12-微信小程序开发</a>
+						<span class="maintext text_teacher">讲师：程涛</span>
+						<span class="maintext text_price">¥ 599.00</span>
+					</li>
+					<li>
+						<a href="#">
+							<div class="overflow">
+								<img class="pic" src="img/course/02.jpg">
+							</div>
+						</a>
+						<a href="#" class="maintext text_name">11-Unity地形搭建</a>
+						<span class="maintext text_teacher">讲师：张东</span>
+						<span class="maintext text_price">¥ 600.00</span>
+					</li>
+					<li>
+						<a href="#">
+							<div class="overflow">
+								<img class="pic" src="img/course/03.jpg">
+							</div>
+						</a>
+						<a href="#" class="maintext text_name">10-UI控件之基础控件</a>
+						<span class="maintext text_teacher">讲师：李然</span>
+						<span class="maintext text_price">¥ 450.00</span>
+					</li>
+					<li>
+						<a href="#">
+							<div class="overflow">
+								<img class="pic" src="img/course/04.jpg">
+							</div>
+						</a>
+						<a href="#" class="maintext text_name">09-微信小程序高级</a>
+						<span class="maintext text_teacher">讲师：成亮</span>
+						<span class="maintext text_price">¥ 200.00</span>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<!-- 底部条 -->
 		<script type="text/javascript">
 			//1.悬停在“我的购物车”上，后面的三角开始旋转，离开则还原
 			//2.购物车从四边显示到open状态中的三边显示
 			//3.下拉菜单从隐藏到open状态中的显示
-			myCart.onmouseenter = () => {
-				caret.classList.add('caret-rotate')
-				cart.classList.add('open')
-				dropdown.classList.add('open')
-			}
-			myCart.onmouseleave = () => {
-				caret.classList.remove('caret-rotate')
-				cart.classList.remove('open')
-				dropdown.classList.remove('open')
+
+			let list = document.querySelectorAll('.pic')
+			for (let i = 0; i < list.length; i++) {
+				let pic = list[i] //从数组中取出第i个图片
+				//鼠标进入该图片，则添加.big1
+				pic.onmouseenter = () => {
+					pic.classList.add('big')
+				}
+				//鼠标离开该图片，则删除.big1
+				pic.onmouseleave = () => {
+					pic.classList.remove('big')
+				}
 			}
 		</script>
 

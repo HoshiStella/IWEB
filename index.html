@@ -204,6 +204,12 @@
 
 			.mainpart {
 				width: 100%;
+				height: 290px;
+			}
+			
+			.teacherpart {
+				width: 100%;
+				height: 360px;
 			}
 
 			.mainpart .minitittle {
@@ -243,6 +249,10 @@
 				text-align: center;
 				margin: 30px 15px;
 			}
+			
+			.mainpart li .teacher {
+				margin-left: -13px;
+			}
 
 			.mainpart .maintext {
 				display: list-item;
@@ -278,6 +288,55 @@
 			.big {
 				transform: scale(1.12);
 			}
+			
+			.footer {
+				width: 100%;
+				height: 198px;
+				margin-top: 50px;
+				background: #EEEEEE;
+				border-top: 1px solid #DDDDDD;
+				margin-top: 50px;
+			}
+			
+			.f_1 {
+				margin: 10px 0;
+				height: 120px;
+			}
+			
+			.f_1 ul {
+				float: left;
+			}
+			
+			.f_1 ul li {
+				height: 120px;
+				width: 60px;
+				float: left;
+				margin-right: 110px;
+			}
+			
+			.f_1 h5 {
+				font-size: 14px;
+				font-weight: lighter;
+			}
+			
+			.f_1 a {
+				color: #666666;
+				display: block;
+				padding: 2px 0;
+			}
+			
+			.f_1 a:hover {
+				color: #FF6600;
+			}
+			
+			.f_2 {
+				text-align: center;
+				color: #999999;
+				padding: 8px 0;
+				border-top: 1px solid #dddddd;
+				line-height: 20px;
+			}
+			
 		</style>
 	</head>
 	<body>
@@ -341,7 +400,8 @@
 			</div>
 		</div>
 		<!-- 滚动广告 -->
-		<!-- 主体内容 -->
+		
+		<!-- 主体-最新课程 -->
 		<div class="mainpart">
 			<div class="container">
 				<div class="minitittle">
@@ -392,11 +452,173 @@
 				</ul>
 			</div>
 		</div>
+		<!-- 主体-热门课程 -->
+		<div class="mainpart">
+			<div class="container">
+				<div class="minitittle">
+					<span>热门课程</span>
+					<a href="#">更多</a>
+				</div>
+				<ul>
+					<li>
+						<a href="#">
+							<div class="overflow">
+								<img class="pic" src="img/course/04.jpg">
+							</div>
+						</a>
+						<a href="#" class="maintext text_name">09-微信小程序高级</a>
+						<span class="maintext text_teacher">讲师：成亮</span>
+						<span class="maintext text_price">¥ 200.00</span>
+					</li>
+					<li>
+						<a href="#">
+							<div class="overflow">
+								<img class="pic" src="img/course/01.jpg">
+							</div>
+						</a>
+						<a href="#" class="maintext text_name">12-微信小程序开发</a>
+						<span class="maintext text_teacher">讲师：程涛</span>
+						<span class="maintext text_price">¥ 599.00</span>
+					</li>
+					<li>
+						<a href="#">
+							<div class="overflow">
+								<img class="pic" src="img/course/06.jpg">
+							</div>
+						</a>
+						<a href="#" class="maintext text_name">06-jQuery操作DOM(上)</a>
+						<span class="maintext text_teacher">讲师：李然</span>
+						<span class="maintext text_price">¥ 600.00</span>
+					</li>
+					<li>
+						<a href="#">
+							<div class="overflow">
+								<img class="pic" src="img/course/05.jpg">
+							</div>
+						</a>
+						<a href="#" class="maintext text_name">05-零基础绘图入门</a>
+						<span class="maintext text_teacher">讲师：成亮</span>
+						<span class="maintext text_price">¥ 350.00</span>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<!-- 主体-名师堂 -->
+		<div class="mainpart teacherpart">
+			<div class="container">
+				<div class="minitittle">
+					<span>名师堂</span>
+					<a href="#">更多</a>
+				</div>
+				<ul>
+					<li>
+						<a href="#">
+							<img src="img/teacher/cl.jpg">
+						</a>
+						<a href="#" class="maintext text_name" style="text-align: center;">讲师：成亮</a>
+						<span class="maintext text_teacher" style="text-align: center;">主讲：WEB全栈开发</span>
+					</li>
+					
+					<li>	
+						<div class="teacher">
+							<a href="#">
+								<img src="img/teacher/lr.jpg">
+							</a>
+							<a href="#" class="maintext text_name" style="text-align: center;">讲师：李然</a>
+							<span class="maintext text_teacher" style="text-align: center;">主讲：高级网页设计</span>
+						</div>														
+					</li>
+					
+					<li>
+						<div class="teacher">
+							<a href="#">
+								<img src="img/teacher/zd.jpg">
+							</a>
+							<a href="#" class="maintext text_name" style="text-align: center;">讲师：张东</a>
+							<span class="maintext text_teacher" style="text-align: center;">主讲：JS高级编程</span>
+						</div>
+					</li>
+					
+					<li>
+						<div class="teacher">
+							<a href="#">
+								<img src="img/teacher/ct.jpg">
+							</a>
+							<a href="#" class="maintext text_name" style="text-align: center;">讲师：程涛</a>
+							<span class="maintext text_teacher" style="text-align: center;">主讲：移动APP开发</span>
+						</div>
+					</li>
+					
+					<li>
+						<div class="teacher">
+							<a href="#">
+								<img src="img/teacher/jyx.jpg">
+							</a>
+							<a href="#" class="maintext text_name" style="text-align: center;">讲师：程涛</a>
+							<span class="maintext text_teacher" style="text-align: center;">主讲：移动APP开发</span>
+						</div>
+					</li>
+				</ul>
+			</div>
+		</div>
 		<!-- 底部条 -->
+		<div class="footer">
+			<div class="container">
+				<div class="f_1">
+					<ul>
+						<li>
+							<h5>关于i前端</h5>
+							<a href="#">发展历程</a>
+							<a href="#">管理团队</a>
+							<a href="#">企业文化</a>
+							<a href="#">加入我们</a>
+						</li>
+							
+						<li>
+							<h5>新手帮助</h5>
+							<a href="#">学员账号</a>
+							<a href="#">选课流程</a>
+							<a href="#">网报流程</a>
+							<a href="#">上课地点</a>
+						</li>
+						
+						<li>
+							<h5>常见问题</h5>
+							<a href="#">如何注册</a>
+							<a href="#">如何搜课</a>
+							<a href="#">如何报名</a>
+							<a href="#">如何缴费</a>
+						</li>
+						
+						<li>
+							<h5>联系我们</h5>
+							<a href="#">校区电话</a>
+							<a href="#">意见建议</a>
+							<a href="#">联系邮箱</a>
+						</li>
+					</ul>
+				</div>
+				<div class="f_2">
+					<span>Copyright © 2016 iqianduan.com, All Rights Reserved 版权所有</span>
+					<br>
+					<span>北京前端教育科技有限公司　京ICP备123456号-1 京公网安备110180201608号</span>
+				</div>
+			</div>
+		</div>
 		<script type="text/javascript">
 			//1.悬停在“我的购物车”上，后面的三角开始旋转，离开则还原
 			//2.购物车从四边显示到open状态中的三边显示
 			//3.下拉菜单从隐藏到open状态中的显示
+			myCart.onmouseenter = () => {
+				caret.classList.add('caret-rotate') //caret：小三角   cart：购物车
+				cart.classList.add('open')
+				dropdown.classList.add('open')
+			}
+			myCart.onmouseleave = () => {
+				caret.classList.remove('caret-rotate')
+				cart.classList.remove('open')
+				dropdown.classList.remove('open')
+			}
 
 			let list = document.querySelectorAll('.pic')
 			for (let i = 0; i < list.length; i++) {

@@ -2,7 +2,7 @@
 * {
 	/* box-sizing: content-box; */
 	box-sizing: border-box;
-	/* 边框盒子,简化盒子尺寸的计算 */
+	/* 简化盒子尺寸的计算 */
 }
 
 body {
